@@ -1,8 +1,9 @@
 @import "generics/reset";
-@import "generics/base";
-@import "generics/colors";
-@import "generics/fonts";
-@import "generics/mixins";
+
+@import "settings/base";
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/mixins";
 
 @import "components/buttons";
 @import "components/headings";
