@@ -1,4 +1,4 @@
-// Ścieżka do aktualnie wykonywanego zadania
+
 const entryPath = ".";
 
 const gulp = require("gulp");
