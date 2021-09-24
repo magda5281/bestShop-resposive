@@ -1,0 +1,25 @@
+
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-background-primary;
+  color: $color-fonts-primary;
+  font-family: $font-family-primary;
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width:100%;
+  margin: 0 auto;
+
+  }
+
+
+
