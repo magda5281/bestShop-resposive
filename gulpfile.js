@@ -1,5 +1,5 @@
 // Ścieżka do aktualnie wykonywanego zadania
-const entryPath = "05_Dzien_3/04_Flexbox/01_Verti";
+const entryPath = ".";
 
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
