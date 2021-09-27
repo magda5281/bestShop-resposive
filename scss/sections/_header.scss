@@ -2,19 +2,19 @@
 .header {
   background-color: $color-background-primary;
   height: 70px;
+  box-shadow: $box-shadow-mobile;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: $box-shadow-mobile;
-    padding: 17px 30px 16px 25px;
     height: 100%;
   }
 
+
   &__nav {
     display: flex;
-    justify-content: stretch;
+
 
     .nav {
       &__checkbox {
@@ -22,29 +22,40 @@
         opacity: 0;
         margin: 0;
         position: absolute;
+
+        @include tablet {
+          display: none;
+          top: -9999px;
+          left: -9999px;
+
+        }
       }
 
-        &__checkbox:checked ~ .nav__list {
-          max-height: 600px;
-          overflow: visible;
-        }
+      &__checkbox:checked ~ .nav__list {
+        max-height: 600px;
+        overflow: visible;
+      }
 
-        &__checkbox:checked ~ .nav__menu {
-          .burger {
-            z-index: -1;
-          }
+      &__checkbox:checked ~ .nav__menu {
+        .burger {
+          z-index: -1;
         }
-         &__checkbox:checked ~ .nav__menu {
+      }
+
+      &__checkbox:checked ~ .nav__menu {
         .times {
           z-index: 1;
         }
       }
+
 
       &__menu {
         font-size: 2.6rem;
         position: relative;
         padding: 15px;
         background-color: white;
+
+
 
         .burger {
           position: absolute;
@@ -54,6 +65,8 @@
 
           @include tablet {
             display: none;
+            top: -9999px;
+            left: -9999px;
           }
         }
 
@@ -66,11 +79,10 @@
 
           @include tablet {
             display: none;
-          }
-        }
+            top: -9999px;
+            left: -9999px;
 
-        @include tablet {
-          display: none;
+          }
         }
       }
 
@@ -89,35 +101,18 @@
         @include tablet {
           max-height: unset;
           position: static;
-          display:flex;
+          display: flex;
           align-items: center;
+          justify-content: space-between;
           box-shadow: none;
           margin: 0;
         }
       }
 
       &__element {
-        margin-bottom: 14px;
-        display: block;
-        width: 100%;
 
-        @include tablet {
-          margin: 0;
-        }
+        padding: 0 26px;
 
-        &:last-child {
-          margin-bottom: 35px;
-          @include tablet {
-            margin: 0;
-          }
-        }
-
-        &:first-child {
-          margin-top: 40px;
-          @include tablet {
-            margin: 0;
-          }
-        }
       }
 
       &__link {
@@ -126,14 +121,26 @@
         letter-spacing: 0.328rem;
         font-size: 1.1rem;
         color: $color-fonts-light;
-        padding: 14px 20px;
+        padding: 20px 0;
+        border-bottom: 4px solid transparent;
+        display: flex;
+        flex-grow: 1;
+        white-space: nowrap;
 
         &:hover {
           font-weight: 900;
           color: $color-fonts-primary;
+          cursor: pointer;
 
+          @include tablet {
+
+            border-bottom: 4px solid $color-accent-blue;
+            padding: 25px 0;
+
+          }
         }
       }
     }
   }
 }
+

@@ -21,7 +21,12 @@ a {
 
 .container {
   width:100%;
+  height: 100%;
   margin: 0 auto;
+
+  @media screen and (min-width: 1352px) {
+    width:1352px;
+  }
   }
 
 .logo {
@@ -32,11 +37,11 @@ a {
   font-family: $font-family-secondary;
   color:$color-accent-blue;
   font-weight: 300;
+  padding: 10px 10px 0 10px;
 
   &--footer {
     font-size:2.6rem;
   }
-
 }
 
 h1, h2, h3, h4 {
