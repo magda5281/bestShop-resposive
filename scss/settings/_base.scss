@@ -20,7 +20,7 @@ a {
 }
 
 .container {
-  width:100%;
+  width:100%px;
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -57,11 +57,11 @@ h1, h2, h3, h4 {
   font-size: 3.5rem;
 }
 
-.secondary--heading {
+.heading--secondary {
   font-size: 3rem;
 }
 
-.pricing--heading {
+.heading--pricing {
   font-size: 3.6rem;
 }
 
