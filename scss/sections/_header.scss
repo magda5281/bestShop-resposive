@@ -122,6 +122,18 @@
           padding-bottom: 35px;
         }
 
+        @include tablet {
+
+          &:first-child {
+            padding-top:14px;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+
+        }
+
       }
 
       &__link {

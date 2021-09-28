@@ -635,6 +635,14 @@ h1, h2, h3, h4 {
 .header__nav .nav__element:last-child {
   padding-bottom: 35px;
 }
+@media screen and (min-width: 820px) {
+  .header__nav .nav__element:first-child {
+    padding-top: 14px;
+  }
+  .header__nav .nav__element:last-child {
+    padding-bottom: 0;
+  }
+}
 .header__nav .nav__link {
   text-transform: uppercase;
   font-weight: 700;
