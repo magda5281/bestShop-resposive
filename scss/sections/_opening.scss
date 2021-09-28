@@ -1,0 +1,46 @@
+.opening {
+    background-color: $color-background-primary;
+
+    &__wrapper {
+        margin: 0 auto;
+        text-align: center;
+        height: 100%;
+
+    }
+    &__heading {
+        margin-top: 100px;
+
+        @include tablet {
+            margin-top: 130px;
+        }
+    }
+    &__paragraph {
+        margin: 20px 0 28px 0;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.6rem;
+        font-family: $font-family-primary;
+        font-weight: 400;
+        justify-content: center;
+    }
+
+    &__image{
+
+        margin: 60px 0;
+    }
+
+    img {
+
+        width: 100%;
+        height: auto;
+        clip-path: inset(0 10px 0 10px);
+
+    }
+
+    .btn--large {
+        @include tablet {
+            padding-right: 157px;
+            padding-left: 157px;
+        }
+    }
+}
