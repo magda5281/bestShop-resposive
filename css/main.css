@@ -489,13 +489,14 @@ h1, h2, h3, h4 {
   font-family: "Raleway", sans-serif;
   color: black;
   font-weight: 400;
+  text-align: center;
 }
 
 .opening__heading {
   font-size: 3.5rem;
 }
 
-.feature--heading {
+.secondary--heading {
   font-size: 3rem;
 }
 
