@@ -1,0 +1,166 @@
+.benefits {
+  background-color: $color-background-secondary;
+  padding: 42px 30px;
+
+  &__wrapper {
+
+    margin: 0 auto;
+    @include tablet {
+      max-width: 1124px;
+    }
+
+  }
+
+  &__boxes {
+    background-color: $color-background-primary;
+    border: 1px solid $color-border-box;
+    border-radius: 5px;
+    padding: 0 22px 30px;
+
+    &:last-child {
+      padding-top: 30px;
+
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      &:first-child {
+        flex-direction: row-reverse;
+        padding-right: 70px;
+      }
+      &:nth-child(2) {
+        padding-left: 70px;
+      }
+    }
+
+  }
+
+  &__artBox {
+    position: relative;
+    width: 215px;
+    height: 170px;
+    padding-left: 20px;
+    @include tablet {
+      width: 436px;
+      height: 294px;
+      margin-top: 40px;
+    }
+  }
+
+
+  //&__Macbook {
+  //  //position:relative;
+  //  //    width:215px;
+  //  //    height: 170px;
+  //
+  //}
+
+  &__image {
+    max-width: 192px;
+    height: 135px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    @include tablet {
+      max-width: 386px;
+      height: 219px;
+      margin-top: 38px;
+
+    }
+
+  }
+
+  &__image--iPhone {
+    max-width: 175px;
+    height: 135px;
+    bottom: 10px;
+    left: 30px;
+
+    @include tablet {
+      height: 320px;
+      max-width: 426px;
+      left: 60px;
+      bottom: -75px;
+    }
+
+  }
+
+  &__art {
+    width: 90px;
+    height: 90px;
+    border-radius: 23px;
+    background: $color-accent-red;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20px;
+    left: 130px;
+    @include tablet {
+      width: 180px;
+      height: 180px;
+      border-radius: 41px;
+      left: 245px;
+    }
+
+
+  }
+
+  &__art--iPhone {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background-color: $color-accent-blue;
+    position: absolute;
+    left: 30px;
+    @include tablet {
+      width: 320px;
+      height: 320px;
+
+    }
+  }
+
+
+  &__text {
+    margin-top: 26px;
+
+    @include tablet {
+      width: 416px;
+      margin: 91px 0;
+
+      &::after {
+        content: "";
+        height: 4px;
+        background-color: $color-accent-red;
+        display: block;
+        width: 330px;
+        margin-top: 50px;
+      }
+      }
+    }
+
+
+
+  .heading--benefits {
+    text-align: left;
+    margin-bottom: 10px;
+    padding-bottom: 40px;
+
+    @include tablet {
+      font-size: 3.6rem;
+
+    }
+  }
+
+
+  &__paragraph{
+    font-family: $font-family-primary;
+    color: $color-fonts-primary;
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: 400;
+    padding: 5px;
+    @include tablet {
+      font-size: 1.6rem;
+    }
+  }
+}
