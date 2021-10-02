@@ -29,8 +29,12 @@
       &:first-child {
         flex-direction: row-reverse;
       }
-      &:nth-child(2) {
-        //padding-left: 70px;
+    }
+
+    @include desktop {
+
+      &:first-child {
+        padding: 0 70px 30px 35px;
       }
     }
   }
@@ -91,11 +95,18 @@
     left: 0;
     bottom: 0;
     z-index: 1;
+
     @include tablet {
       max-width:300px;
       height: 170px;
       left: 30px;
+    }
 
+    @include desktop {
+      max-width: 386px;
+      height: 219px;
+      bottom: -20px;
+      left: 53px;
     }
   }
 
@@ -110,6 +121,13 @@
       max-width: 300px;
       left: 65px;
       bottom: 0;
+    }
+
+    @include desktop {
+      height: 320px;
+      max-width: 428px;
+      left: 65px;
+      bottom: -77px;
     }
   }
 
@@ -144,6 +162,13 @@
       left: 200px;
     }
 
+    @include desktop {
+      width: 180px;
+      height: 180px;
+      border-radius: 41px;
+      top: -16px;
+      left: 275px;
+    }
   }
 
   &__art--iPhone {
@@ -157,10 +182,15 @@
     @include tablet {
       width: 200px;
       height: 200px;
+    }
 
+    @include  desktop {
+      width: 320px;
+      height: 320px;
+      top: -37px;
+      left:43px;
     }
   }
-
 
   &__text {
     margin-top: 26px;
@@ -179,6 +209,10 @@
 
       }
     }
+
+    @include desktop {
+      margin: 90px 0 60px 0;
+    }
   }
 
   &__text--iPhone {
@@ -188,6 +222,9 @@
       background-color: $color-accent-blue;
     }
 
+    @include desktop {
+      margin-left: 190px;
+    }
   }
 
   &__text--separate {
@@ -205,7 +242,6 @@
     }
   }
 
-
   .heading--benefits {
     text-align: left;
     margin-bottom: 10px;
@@ -215,11 +251,11 @@
       font-size: 3.6rem;
     }
   }
+
   .heading--doubleLine {
     padding-bottom: 0;
     margin-bottom: 18px;
   }
-
 
   &__paragraph{
     font-family: $font-family-primary;
@@ -233,7 +269,6 @@
       font-size: 1.6rem;
     }
   }
-
 }
 
 
