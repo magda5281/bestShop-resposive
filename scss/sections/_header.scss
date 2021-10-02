@@ -9,6 +9,15 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    margin: 0 auto;
+
+    @include iPad {
+      padding: 0 30px;
+    }
+   @include desktop {
+     padding: 0 100px;
+   }
+
   }
 
 
@@ -131,9 +140,7 @@
           &:last-child {
             padding-bottom: 0;
           }
-
         }
-
       }
 
       &__link {
