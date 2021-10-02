@@ -13,6 +13,9 @@
         @include tablet {
             margin-top: 130px;
         }
+        @include desktop {
+            font-size: 4.9rem;
+        }
     }
     &__paragraph {
         margin: 20px 0 28px 0;
