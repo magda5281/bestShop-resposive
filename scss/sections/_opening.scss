@@ -34,9 +34,13 @@
 
     img {
 
-        width: 100%;
+        width: 100vw;
         height: auto;
-        clip-path: inset(0 10px 0 10px);
+
+        @include desktop {
+            width: 100%;
+        }
+
 
     }
 
