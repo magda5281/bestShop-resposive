@@ -506,20 +506,6 @@ h1, h2, h3, h4 {
   line-height: 3.5rem;
 }
 
-.heading--pricing {
-  font-size: 3.6rem;
-}
-
-.pricing--title {
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.pricing--offer {
-  font-size: 1.2rem;
-  font-weight: 800;
-}
-
 .btn {
   color: white;
   font-weight: 800;
@@ -527,6 +513,9 @@ h1, h2, h3, h4 {
   padding: 16px 57px;
   border-radius: 23px;
   border: none;
+  background-color: #fb3b64;
+  text-align: center;
+  font-size: 13px;
 }
 
 .btn--primary {
@@ -1083,5 +1072,98 @@ h1, h2, h3, h4 {
   .benefits__paragraph {
     font-size: 1.6rem;
   }
+}
+
+.pricing {
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 18px;
+}
+.pricing .heading--pricing {
+  font-size: 3.6rem;
+  margin-top: 53px;
+  margin-bottom: 14px;
+}
+.pricing__boxes {
+  margin: 0 auto;
+  height: 100%;
+}
+.pricing__wrapper {
+  margin: 0 auto 30px;
+  padding-bottom: 22.5px;
+  position: relative;
+}
+.pricing__wrapper .btn {
+  position: absolute;
+  bottom: 0;
+  left: 95px;
+}
+.pricing__wrapper--professional .btn {
+  background-color: #08a6e4;
+}
+.pricing__wrapper--premium .btn {
+  background-color: #55dfb4;
+}
+.pricing__box {
+  border: 1px solid #fb3b64;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 11px 51px 28px;
+  align-items: center;
+}
+.pricing__box--basic {
+  margin: 0 23px;
+}
+.pricing__box--premium {
+  margin: 0 23px;
+  border: 1px solid #55dfb4;
+}
+.pricing__box--professional {
+  border: 1px solid #08a6e4;
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16);
+}
+.pricing__details {
+  margin: 0 auto;
+  padding-right: 23px;
+}
+.pricing__type {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.pricing__price {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 300;
+  color: #fb3b64;
+  padding: 8px 3px;
+}
+.pricing__offer {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-align: center;
+  color: #13253b;
+}
+.pricing__list {
+  text-align: left;
+  font-size: 14px;
+}
+.pricing__inclusions {
+  padding: 10px 0;
+}
+.pricing__inclusions::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background-image: url("../assets/Ckechmark-1.svg");
+  display: inline-block;
+  margin-right: 10px;
+}
+.pricing__inclusions--not::before {
+  background-image: url("../assets/Close.svg");
+}
+.pricing__inclusions--upper {
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,117 @@
+@use "sass:math";
+.pricing {
+  margin: 0 auto;
+  background-color: $color-background-primary;
+  padding: 0 18px;
+
+  .heading--pricing {
+      font-size: 3.6rem;
+      margin-top: 53px;
+      margin-bottom: 14px;
+    }
+  &__boxes {
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  &__wrapper {
+    margin: 0 auto 30px;
+    padding-bottom: 22.5px;
+    position: relative;
+
+    & .btn {
+      position: absolute;
+      bottom: 0;
+      left: 95px;
+    }
+  }
+
+  &__wrapper--professional {
+    & .btn {
+      background-color: $color-accent-blue;
+    }
+  }
+
+  &__wrapper--premium {
+    & .btn {
+      background-color: $color-accent-green;
+    }
+  }
+
+  &__box {
+    border: 1px solid $color-accent-red;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 11px 51px 28px;
+    align-items: center;
+  }
+
+  &__box--basic {
+    margin: 0 23px;
+  }
+
+  &__box--premium {
+    margin: 0 23px;
+    border: 1px solid $color-accent-green;
+  }
+
+  &__box--professional {
+    border: 1px solid $color-accent-blue;
+    box-shadow: 5px 10px 27px $color-shadow-primary;
+  }
+
+  &__details {
+    margin: 0 auto;
+    padding-right: 23px;
+  }
+
+  &__type {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  &__price {
+    text-align: center;
+    font-family: $font-family-primary;
+    font-size: 46px;
+    font-weight: 300;
+    color: $color-accent-red;
+    padding: 8px 3px;
+  }
+
+  &__offer {
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-align: center;
+    color: rgba(19, 37, 59, 1);
+    }
+
+  &__list {
+    text-align: left;
+    font-size: 14px;
+  }
+
+  &__inclusions {
+    padding: 10px 0;
+
+    &::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      background-image:url("../assets/Ckechmark-1.svg");
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  &__inclusions--not {
+    &::before {
+      background-image:url("../assets/Close.svg");
+    }
+  }
+
+  &__inclusions--upper {
+    text-transform: uppercase;
+  }
+}
