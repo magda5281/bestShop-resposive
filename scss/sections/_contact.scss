@@ -1,0 +1,11 @@
+.contact {
+  background-color: $color-background-primary;
+  margin: 0 auto;
+
+  &__wrapper{
+
+    max-width: 900px;
+    margin: 53px auto 44px;
+    padding:0 30px;
+  }
+}
