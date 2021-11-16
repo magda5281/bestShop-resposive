@@ -1,6 +1,7 @@
 .contact {
   background-color: $color-background-primary;
   margin: 0 auto;
+  font-family: $font-family-primary;
 
   &__wrapper{
 
@@ -8,4 +9,118 @@
     margin: 53px auto 44px;
     padding:0 30px;
   }
+
+  &--heading{
+    font-size: 4rem;
+    line-height: 4.7rem;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  &__prompt{
+    font-size: 1.6rem;
+    font-family: $font-family-primary;
+    text-align: left;
+    padding-bottom: 30px;
+
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    img {
+      height: 27px;
+      width: 27px;
+      margin-right: 5px;
+    }
+
+  }
+
+  &__link{
+    font-size: 1rem;
+    color: $color-fonts-light;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .form {
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 42px;
+  }
+    &__label{
+      text-transform: uppercase;
+      color: $color-accent-blue;
+      justify-items: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+
+    }
+
+    &__input{
+      border-collapse: collapse;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid $color-form-input-box;
+      line-height: 3;
+    }
+
+    &__consent{
+      margin-bottom: 20px;
+    }
+
+    &__checkbox{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      margin-bottom: 10px;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked + .checkbox{
+        background-image: url("../assets/Checkmark.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+
+        }
+    }
+
+      .checkbox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border:  1px solid rgba(149, 152, 154, 1);
+        border-radius: 4px;
+        background-color: $color-white;
+        height: 24px;
+        width: 24px;
+        cursor: pointer;
+      }
+
+    }
+    &__button {
+      display: flex;
+      align-items: flex-end;
+      justify-content: end;
+    }
+
+  }
+
+  .consent__text{
+    margin-left: 29px;
+    font-size: 1.2rem;
+    color: $color-fonts-dark;
+
+  }
+
+
+
 }

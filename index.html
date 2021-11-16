@@ -274,7 +274,6 @@
         </div>
     </section>
 
-
     <!--CONTACT SECTION    -->
 
     <section class="contact">
@@ -283,10 +282,10 @@
                 <h2 class="contact--heading">Any questions?</h2>
                 <p class="contact__prompt">Leave your email address or call us!</p>
                 <div class="contact__details">
-                    <a href="#" class="contact__email">
+                    <a href="#" class="contact__link">
                         <img src="assets/Mail Icon.svg" alt="#">info@bestshop.xyz
                     </a>
-                    <a href="#"class="contact__phone">
+                    <a href="#"class="contact__link">
                         <img src="assets/Phone Icon.svg" alt="#"> info@bestshop.xyz
                     </a>
                 </div>
@@ -305,20 +304,27 @@
                         </label>
                         <input type="text" id="email" class="form__input"/>
                     </div>
+
                     <div class="form__consent">
-                        <label class="consent__label">
-                            <intput type="checkbox" name="consent" class="consent__checkbox"/>
-                                <p class="consent__paragraph">
-                                    I hereby give consent for my personal data included in my application to
-                                    be processed for the purposes of the recruitment process under the
-                                    European Parliament’s and Council of the European Union Regulation
-                                    on the Protection of Natural Persons as of 27 April 2016, with regard to
-                                    the processing of personal data and on the free movement of such data,
-                                    and repealing Directive 95/46/EC (Data Protection Directive)
-                                </p>
+                        <label class="form__checkbox">
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            <p class="consent__text">
+                                I hereby give consent for my personal data included in my
+                                application to be processed for the purposes of the recruitment
+                                process under the European Parliament’s and Council of the
+                                European Union Regulation on the Protection of Natural Persons as
+                                of 27 April 2016, with regard to the processing of personal data
+                                and on the free movement of such data, and repealing Directive
+                                95/46/EC (Data Protection Directive)
+                            </p>
+
                         </label>
                     </div>
-                    <a href="#" class="btn btn--primary btn--submit">Send</a>
+                    <div class="form__button">
+                        <a href="#" class="btn btn--primary btn--submit">Send</a>
+                    </div>
+
                 </form>
             </div>
         </div>

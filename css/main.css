@@ -1283,11 +1283,102 @@ h1, h2, h3, h4 {
 .contact {
   background-color: white;
   margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
 }
 .contact__wrapper {
   max-width: 900px;
   margin: 53px auto 44px;
   padding: 0 30px;
+}
+.contact--heading {
+  font-size: 4rem;
+  line-height: 4.7rem;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.contact__prompt {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  padding-bottom: 30px;
+}
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.contact__details img {
+  height: 27px;
+  width: 27px;
+  margin-right: 5px;
+}
+.contact__link {
+  font-size: 1rem;
+  color: #a5a5a5;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.contact .form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 42px;
+}
+.contact .form__label {
+  text-transform: uppercase;
+  color: #08a6e4;
+  justify-items: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.contact .form__input {
+  border-collapse: collapse;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #95989a;
+  line-height: 3;
+}
+.contact .form__consent {
+  margin-bottom: 20px;
+}
+.contact .form__checkbox {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 10px;
+}
+.contact .form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.contact .form__checkbox input:checked + .checkbox {
+  background-image: url("../assets/Checkmark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contact .form__checkbox .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #95989a;
+  border-radius: 4px;
+  background-color: white;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+.contact .form__button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+.contact .consent__text {
+  margin-left: 29px;
+  font-size: 1.2rem;
+  color: #707070;
 }
 
 .calc {
