@@ -446,6 +446,7 @@ textarea {
 }
 
 body {
+  min-width: 360px;
   background-color: white;
   color: black;
   font-family: "Open Sans", sans-serif;
@@ -1497,6 +1498,11 @@ h1, h2, h3, h4 {
 .calc__input input::placeholder {
   color: #a5a5a5;
   font-size: 1.3rem;
+}
+@media screen and (min-width: 360px) and (max-width: 423px) {
+  .calc__input--long {
+    padding-right: 0;
+  }
 }
 .calc__select {
   position: relative;

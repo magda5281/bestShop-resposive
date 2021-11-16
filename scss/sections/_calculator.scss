@@ -24,7 +24,6 @@
 
   &__form {
     width: 50%;
-    //margin-right: 20px;
     margin: 0 auto;
 
     @include tablet {
@@ -55,6 +54,13 @@
         font-size: 1.3rem;
       }
     }
+
+  }
+  &__input--long {
+    @include phone {
+      padding-right: 0;
+    }
+
   }
 
   &__select {

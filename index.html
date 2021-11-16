@@ -15,7 +15,7 @@
 </head>
 <body>
     <header class="header">
-<!--        <div class="container">-->
+
             <div class="header__wrapper">
                 <a href="" class="logo">BestShop</a>
                 <nav class="header__nav">
@@ -25,19 +25,20 @@
                         <span class="times"><i class="fas fa-times"></i></span>
                     </label>
                     <ul class="nav__list">
-                        <li class="nav__element"><a href="#" class="nav__link">Why us</a></li>
-                        <li class="nav__element"><a href="#" class="nav__link">Benefits</a></li>
-                        <li class="nav__element"><a href="#" class="nav__link">Prices</a></li>
-                        <li class="nav__element"><a href="#" class="nav__link">Contact</a></li>
+                        <li class="nav__element"><a href="#statistics" class="nav__link">Why us</a></li>
+                        <li class="nav__element"><a href="#benefits" class="nav__link">Benefits</a></li>
+                        <li class="nav__element"><a href="#pricing" class="nav__link">Prices</a></li>
+                        <li class="nav__element"><a href="#calculator" class="nav__link">Calculator</a></li>
+                        <li class="nav__element"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-<!--        </div>-->
+
     </header>
 
 <!--OPENING SECTION-->
 
-    <section class="opening">
+    <section class="opening" id="opening">
         <div class="container">
             <div class="opening__wrapper">
                 <h1 class="opening__heading">Sell More!</h1>
@@ -51,7 +52,7 @@
 
 <!--    STATISTICS SECTION-->
 
-    <section class="statistics">
+    <section class="statistics" id="statistics">
         <div class="container">
             <h2 class="heading--secondary">The most popular sales platform in country</h2>
             <div class="statistics__wrapper">
@@ -83,7 +84,7 @@
 <!--    BENEFITS SECTION -->
 
 
-    <section class="benefits">
+    <section class="benefits" id="benefits">
         <div class="container">
             <div class="benefits__wrapper">
                 <div class="benefits__boxes benefits__boxes--single ">
@@ -146,7 +147,7 @@
 
 <!--PRICING SECTION -->
 
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="heading--pricing">Pricing</h2>
             <div class="pricing__boxes">
@@ -206,7 +207,7 @@
 
 <!--    CALCULATOR SECTION -->
 
-    <section class="calc">
+    <section class="calc" id="calculator">
         <h2>Calculate how much you’ll pay</h2>
 
         <div class="calc__columns">
@@ -215,7 +216,8 @@
                     <input type="number" class="form__input" id="products" min="1" step="1" placeholder="Products quantity"/>
                 </div>
                 <div class="calc__input">
-                    <input type="number" class="form__input" id="orders" min="1" step="1" placeholder="Estimated orders in month"/>
+                    <input type="number" class="form__input form__input--long" id="orders" min="1" step="1"
+                           placeholder="Estimated orders in month"/>
                 </div>
                 <div class="calc__select" id="package" data-value="">
                     <div class="select__input">
@@ -276,7 +278,7 @@
 
     <!--CONTACT SECTION    -->
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact__wrapper">
             <div class="contact__info">
                 <h2 class="contact--heading">Any questions?</h2>
@@ -331,7 +333,7 @@
     </section>
 
 <!--    FOOTER-->
-    <footer class="footer">
+    <footer class="footer" >
         <div class="footer__wrapper">
             <div class="footer__left">
                 <a href="" class="logo logo--footer">BestShop</a>
