@@ -4,29 +4,67 @@
   font-family: $font-family-primary;
 
   &__wrapper{
-
     max-width: 900px;
     margin: 53px auto 44px;
     padding:0 30px;
+
+    @include tablet{
+      padding: 0 70px;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: right;
+    }
+  }
+
+  &__info {
+    @include desktop{
+      width: 50%;
+    }
+
   }
 
   &--heading{
+    width: 100%;
     font-size: 4rem;
     line-height: 4.7rem;
     text-align: left;
     margin-bottom: 5px;
+    @include desktop {
+      font-size: 4.9rem;
+      margin-bottom: 22px;
+      line-height: 5.7rem;
+    }
   }
   &__prompt{
     font-size: 1.6rem;
     font-family: $font-family-primary;
     text-align: left;
     padding-bottom: 30px;
+    @include desktop {
+      padding-bottom: 42px;
+
+    }
 
   }
   &__details {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
+
+    @include desktop{
+      flex-direction: row;
+
+    }
+
+    a {
+      @include desktop {
+      margin-right: 20px;
+      }
+    }
+
 
     img {
       height: 27px;
@@ -41,6 +79,18 @@
     color: $color-fonts-light;
     font-weight: 600;
     margin-bottom: 15px;
+
+    @include desktop{
+      font-size: 1.6rem;
+    }
+  }
+
+  &__form{
+    @include desktop {
+      width: 50%;
+      padding-left: 30px;
+
+    }
   }
 
   .form {
@@ -49,6 +99,8 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 42px;
+
+
   }
     &__label{
       text-transform: uppercase;
@@ -56,6 +108,9 @@
       justify-items: center;
       font-size: 1.1rem;
       font-weight: 800;
+      @include desktop {
+        align-self: flex-start;
+      }
 
     }
 
@@ -70,6 +125,7 @@
 
     &__consent{
       margin-bottom: 20px;
+
     }
 
     &__checkbox{
@@ -118,6 +174,9 @@
     margin-left: 29px;
     font-size: 1.2rem;
     color: $color-fonts-dark;
+    @include desktop {
+      text-align: left;
+    }
 
   }
 

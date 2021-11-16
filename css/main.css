@@ -1290,11 +1290,37 @@ h1, h2, h3, h4 {
   margin: 53px auto 44px;
   padding: 0 30px;
 }
+@media screen and (min-width: 820px) {
+  .contact__wrapper {
+    padding: 0 70px;
+  }
+}
+@media screen and (min-width: 1352px) {
+  .contact__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+  }
+}
+@media screen and (min-width: 1352px) {
+  .contact__info {
+    width: 50%;
+  }
+}
 .contact--heading {
+  width: 100%;
   font-size: 4rem;
   line-height: 4.7rem;
   text-align: left;
   margin-bottom: 5px;
+}
+@media screen and (min-width: 1352px) {
+  .contact--heading {
+    font-size: 4.9rem;
+    margin-bottom: 22px;
+    line-height: 5.7rem;
+  }
 }
 .contact__prompt {
   font-size: 1.6rem;
@@ -1302,10 +1328,25 @@ h1, h2, h3, h4 {
   text-align: left;
   padding-bottom: 30px;
 }
+@media screen and (min-width: 1352px) {
+  .contact__prompt {
+    padding-bottom: 42px;
+  }
+}
 .contact__details {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 1352px) {
+  .contact__details {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1352px) {
+  .contact__details a {
+    margin-right: 20px;
+  }
 }
 .contact__details img {
   height: 27px;
@@ -1318,6 +1359,17 @@ h1, h2, h3, h4 {
   font-weight: 600;
   margin-bottom: 15px;
 }
+@media screen and (min-width: 1352px) {
+  .contact__link {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1352px) {
+  .contact__form {
+    width: 50%;
+    padding-left: 30px;
+  }
+}
 .contact .form__field {
   display: flex;
   flex-direction: column;
@@ -1329,6 +1381,11 @@ h1, h2, h3, h4 {
   justify-items: center;
   font-size: 1.1rem;
   font-weight: 800;
+}
+@media screen and (min-width: 1352px) {
+  .contact .form__label {
+    align-self: flex-start;
+  }
 }
 .contact .form__input {
   border-collapse: collapse;
@@ -1379,6 +1436,11 @@ h1, h2, h3, h4 {
   margin-left: 29px;
   font-size: 1.2rem;
   color: #707070;
+}
+@media screen and (min-width: 1352px) {
+  .contact .consent__text {
+    text-align: left;
+  }
 }
 
 .calc {
