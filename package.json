@@ -424,7 +424,8 @@
   },
   "scripts": {
     "start": "gulp",
-    "build": "gulp sass"
+    "build": "gulp sass",
+    "export": "next build && next export"
   },
   "repository": {
     "type": "git",
