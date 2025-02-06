@@ -21,7 +21,7 @@ function compileSass(done) {
 
 function watcher(done) {
   browserSync.init({
-    server: './' + entryPath,
+    server: entryPath + '/',
   });
 
   gulp.watch(entryPath + '/scss/**/*.scss', gulp.series(compileSass, reload));
