@@ -17,7 +17,7 @@
     <header class="header">
 
             <div class="header__wrapper">
-                <a href="" class="logo">BestShop</a>
+                <a href="#" class="logo" aria-label="Best shop logo">BestShop</a>
                 <nav class="header__nav">
                     <input type="checkbox" class="nav__checkbox" id="nav__checkbox">
                     <label for="nav__checkbox" class="nav__menu">
@@ -25,11 +25,11 @@
                         <span class="times"><i class="fas fa-times"></i></span>
                     </label>
                     <ul class="nav__list">
-                        <li class="nav__element"><a href="#statistics" class="nav__link">Why us</a></li>
-                        <li class="nav__element"><a href="#benefits" class="nav__link">Benefits</a></li>
-                        <li class="nav__element"><a href="#pricing" class="nav__link">Prices</a></li>
-                        <li class="nav__element"><a href="#calculator" class="nav__link">Calculator</a></li>
-                        <li class="nav__element"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__element"><a href="#statistics" class="nav__link" aria-label="why us">Why us</a></li>
+                        <li class="nav__element"><a href="#benefits" class="nav__link" aria-label="Benefits">Benefits</a></li>
+                        <li class="nav__element"><a href="#pricing" class="nav__link" aria-label="Prices">Prices</a></li>
+                        <li class="nav__element"><a href="#calculator" class="nav__link" aria-label="Calculator">Calculator</a></li>
+                        <li class="nav__element"><a href="#contact" class="nav__link" aria-label="Contacts">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -43,7 +43,7 @@
             <div class="opening__wrapper">
                 <h1 class="opening__heading">Sell More!</h1>
                 <p class="opening__paragraph">Open shop on our platform and increase your sales</p>
-                <a href="" class="btn btn--primary btn--large">Open your shop</a>
+                <a href="#" class="btn btn--primary btn--large" aria-label="Open your shop">Open your shop</a>
             </div>
             <div class="opening__image"><img src="assets/Background.png" alt="notebook"></div>
 
@@ -89,10 +89,8 @@
             <div class="benefits__wrapper">
                 <div class="benefits__boxes benefits__boxes--single ">
                     <div class="benefits__artBox ">
-<!--                        <div class="benefits__Macbook">-->
                             <div class="benefits__art"></div>
                             <img src="assets/Macbook.png" alt="Macbook" class="benefits__image">
-<!--                        </div>-->
                     </div>
                     <div class="benefits__text">
                         <h2 class="heading--secondary heading--benefits">Be always first</h2>
@@ -106,10 +104,10 @@
                 </div>
                 <div class="benefits__boxes benefits__boxes--single">
                     <div class="benefits__artBox benefits__artBox--iPhone">
-<!--                        <div class="benefits__iPhone">-->
+
                             <img src="assets/iPhone.png" alt="Iphone" class="benefits__image benefits__image--iPhone">
                             <div class="benefits__art benefits__art--iPhone"></div>
-<!--                        </div>-->
+
                     </div>
 
                     <div class="benefits__text benefits__text--iPhone">
@@ -134,10 +132,8 @@
                         </p>
                     </div>
                     <div class="benefits__artBox benefits__artBox--solid">
-<!--                        <div class="artBox__background">-->
                             <img src="assets/Trumpet.png" alt="Trumpet icon"
                                  class="benefits__trumpet">
-<!--                        </div>-->
                     </div>
 
                 </div>
@@ -165,7 +161,7 @@
                             <li class="pricing__inclusions pricing__inclusions--not">Full support</li>
                         </ul>
                     </div>
-                    <a href="" class="btn">Begin</a>
+                    <a href="#" class="btn" aria-label="Begin">Begin</a>
                 </div>
                 <div class="pricing__wrapper pricing__wrapper--professional">
                     <div class="pricing__box pricing__box--professional">
@@ -182,7 +178,7 @@
                             <li class="pricing__inclusions pricing__inclusions--not">Full support</li>
                         </ul>
                     </div>
-                    <a href="" class="btn ">Begin</a>
+                    <a href="#" class="btn " aria-label="Begin">Begin</a>
                 </div>
                 <div class="pricing__wrapper pricing__wrapper--premium">
                     <div class="pricing__box pricing__box--premium">
@@ -199,7 +195,7 @@
                             <li class="pricing__inclusions">Full support</li>
                         </ul>
                     </div>
-                    <a href="" class="btn">Begin</a>
+                    <a href="#" class="btn" aria-label="Begin">Begin</a>
                 </div>
             </div>
         </div>
@@ -230,12 +226,12 @@
                         <li data-value="premium">Premium</li>
                     </ul>
                 </div>
-                <label class="form__checkbox">
+                <label for ="accounting" class="form__checkbox">
                     <input type="checkbox" id="accounting"/>
                     <span class="checkbox"></span>
                     <p class="consent__text">Accounting</p>
                 </label>
-                <label class="form__checkbox">
+                <label for ="terminal" class="form__checkbox">
                     <input type="checkbox" id="terminal"/>
                     <span class="checkbox"></span>
                     <p class="consent__text">Rental of a payment terminal</p>
@@ -284,10 +280,10 @@
                 <h2 class="contact--heading">Any questions?</h2>
                 <p class="contact__prompt">Leave your email address or call us!</p>
                 <div class="contact__details">
-                    <a href="#" class="contact__link">
+                    <a href="#" class="contact__link" aria-label="email" >
                         <img src="assets/Mail Icon.svg" alt="#">info@bestshop.xyz
                     </a>
-                    <a href="#"class="contact__link">
+                    <a href="#"class="contact__link" aria-label="phone number">
                         <img src="assets/Phone Icon.svg" alt="#"> 123 456 789
                     </a>
                 </div>
@@ -308,8 +304,8 @@
                     </div>
 
                     <div class="form__consent">
-                        <label class="form__checkbox">
-                            <input type="checkbox"/>
+                        <label class="form__checkbox" for ="consent">
+                            <input type="checkbox" id = "consent"/>
                             <span class="checkbox"></span>
                             <p class="consent__text">
                                 I hereby give consent for my personal data included in my
@@ -324,7 +320,7 @@
                         </label>
                     </div>
                     <div class="form__button">
-                        <a href="#" class="btn btn--primary btn--submit">Send</a>
+                        <a href="#" class="btn btn--primary btn--submit" aria-label="Send">Send</a>
                     </div>
 
                 </form>
@@ -336,16 +332,16 @@
     <footer class="footer" >
         <div class="footer__wrapper">
             <div class="footer__left">
-                <a href="" class="logo logo--footer">BestShop</a>
+                <a href="#" class="logo logo--footer">BestShop</a>
                 <small class="footer__small">© 2019 BestShop LTD, All Rights Reserved</small>
             </div>
             <div class="footer__right">
-                <a href="#"><img src="assets/Twitter.svg" alt="Twitter icon"></a>
-                <a href="#"><img src="assets/Facebook.svg" alt="Facebook icon"></a>
+                <a href="#" aria-label="twitter"><img src="assets/Twitter.svg" alt="Twitter icon"></a>
+                <a href="#" aria-label="facebook"><img src="assets/Facebook.svg" alt="Facebook icon"></a>
             </div>
         </div>
     </footer>
 
-    <script src="js/app.js"> </script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>

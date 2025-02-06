@@ -1,128 +1,117 @@
-const form =  document.querySelector(".calc__form");
-const products = form.querySelector ("#products");
-const orders = form.querySelector("#orders");
-const select = form.querySelector(".select__input");
-const dropdown = form.querySelector(".select__dropdown");
-const packages = dropdown.querySelectorAll("li");
-const accounting = form.querySelector("#accounting");
-const terminal = form.querySelector("#terminal");
+const form = document.querySelector('.calc__form');
+const summary = document.querySelector('.calc__summary');
 
-const summary = document.querySelector(".calc__summary");
+// Inputs
+const products = form.querySelector('#products');
+const orders = form.querySelector('#orders');
+const select = form.querySelector('.select__input');
+const dropdown = form.querySelector('.select__dropdown');
+const packages = dropdown.querySelectorAll('li');
+const accounting = form.querySelector('#accounting');
+const terminal = form.querySelector('#terminal');
 
-const productSummary = summary.querySelector('li[data-id="products"]');
-const productQuantity = productSummary.querySelector(".item__calc");
-const productPriceTotal = productSummary.querySelector(".item__price");
-const productPrice = 5;
-let productSum = 0;
+// Summary Items
+const summaryItems = {
+  products: summary.querySelector('li[data-id="products"]'),
+  orders: summary.querySelector('li[data-id="orders"]'),
+  package: summary.querySelector('li[data-id="package"]'),
+  accounting: summary.querySelector('li[data-id="accounting"]'),
+  terminal: summary.querySelector('li[data-id="terminal"]'),
+};
 
-const orderSummary = summary.querySelector('li[data-id="orders"]');
-const orderQuantity = orderSummary.querySelector(".item__calc");
-const orderPriceTotal = orderSummary.querySelector(".item__price");
-const orderPrice = 2;
-let orderSum = 0;
+// Price Mapping
+const prices = {
+  product: 5,
+  order: 2,
+  package: {
+    basic: 0,
+    professional: 50,
+    premium: 70,
+  },
+  accounting: 35,
+  terminal: 6,
+};
 
-const packageSummary = summary.querySelector('li[data-id="package"]');
-const packageType = packageSummary.querySelector(".item__calc");
-const packagePriceTotal = packageSummary.querySelector(".item__price");
-const basicPrice = 0;
-const professionalPrice = 50;
-const premiumPrice = 70;
-let packagesValue = 0;
-
-const accountingSummary = summary.querySelector('li[data-id="accounting"]');
-const accountingPrice = accountingSummary.querySelector(".item__price");
-let accountingPriceValue = 0;
-
-const terminalSummary = summary.querySelector('li[data-id="terminal"]');
-const terminalPrice = terminalSummary.querySelector(".item__price");
-let terminalPriceValue = 0;
-
-const totalOrderSummary = summary.querySelector("#total-price");
-const totalOrderElem = totalOrderSummary.querySelector(".total__price");
+// Order Summary
+const totalOrderSummary = summary.querySelector('#total-price');
+const totalOrderElem = totalOrderSummary.querySelector('.total__price');
 let totalOrderPrice = 0;
 
-function showTotal(){
-    totalOrderSummary.style.display = "flex";
-    totalOrderPrice = productSum + orderSum + packagesValue + accountingPriceValue + terminalPriceValue;
-    totalOrderElem.innerText = "$" + totalOrderPrice;
+// Function: Update Total Price
+function updateTotal() {
+  totalOrderPrice =
+    (products.value * prices.product || 0) +
+    (orders.value * prices.order || 0) +
+    (summaryItems.package.dataset.price || 0) +
+    (accounting.checked ? prices.accounting : 0) +
+    (terminal.checked ? prices.terminal : 0);
+
+  totalOrderElem.innerText = `$${totalOrderPrice}`;
+  totalOrderSummary.style.display = totalOrderPrice ? 'flex' : 'none';
 }
 
- products.addEventListener("change", function (event) {
-     productSum = products.value * productPrice;
-    productSummary.style.display = "flex";
-    productQuantity.innerText = products.value + " * " + "$" + productPrice;
-    productPriceTotal.innerText ="$" + productSum;
+// Function: Update Summary Item
+function updateSummaryItem(item, quantity, price) {
+  if (quantity > 0) {
+    item.style.display = 'flex';
+    item.querySelector('.item__calc').innerText = `${quantity} * $${price}`;
+    item.querySelector('.item__price').innerText = `$${quantity * price}`;
+  } else {
+    item.style.display = 'none';
+  }
+}
 
-    showTotal();
-
- });
-
-orders.addEventListener("change", function(event) {
-    orderSummary.style.display = "flex";
-    orderQuantity.innerText = orders.value + " * " + "$" + orderPrice;
-    orderSum = orders.value * orderPrice
-    orderPriceTotal.innerText = "$" + orderSum;
-
-   showTotal();
-
-} );
-
-select.addEventListener("click", function (event) {
-   dropdown.style.display = "block";
+// Event: Product & Order Input Change
+form.addEventListener('input', (event) => {
+  if (event.target === products) {
+    updateSummaryItem(summaryItems.products, products.value, prices.product);
+  }
+  if (event.target === orders) {
+    updateSummaryItem(summaryItems.orders, orders.value, prices.order);
+  }
+  updateTotal();
 });
 
-packages.forEach(function (element) {
-    element.addEventListener("click", function (event) {
-         select.innerText = this.innerText ;
-         dropdown.style.display = "none";
-         packageSummary.style.display = "flex";
-         packageType.innerText = this.innerText;
-         if (this.innerText === "Basic") {
-             packagesValue = basicPrice;
-             packagePriceTotal.innerText = "$"+ basicPrice;
-         }
-         if (this.innerText === "Professional") {
-             packagesValue = professionalPrice;
-             packagePriceTotal.innerText = "$" + professionalPrice;
-         }
-         if (this.innerText === "Premium") {
-             packagesValue = premiumPrice;
-             packagePriceTotal.innerText = "$" + premiumPrice;
-         }
-
-         showTotal();
-    });
+// Event: Package Selection (Dropdown)
+select.addEventListener('click', () => {
+  dropdown.style.display =
+    dropdown.style.display === 'block' ? 'none' : 'block';
 });
 
-accounting.addEventListener("change", function (event) {
+// Event: Selecting a Package
+dropdown.addEventListener('click', (event) => {
+  if (event.target.tagName === 'LI') {
+    const selectedPackage = event.target.dataset.value;
+    select.innerText = event.target.innerText;
+    dropdown.style.display = 'none';
 
-    if (accounting.checked === true) {
-        accountingSummary.style.display = "flex";
-        accountingPriceValue = 35;
-        accountingPrice.innerText = "$" + accountingPriceValue;
-    }
+    summaryItems.package.style.display = 'flex';
+    summaryItems.package.querySelector('.item__calc').innerText =
+      event.target.innerText;
+    summaryItems.package.querySelector(
+      '.item__price'
+    ).innerText = `$${prices.package[selectedPackage]}`;
+    summaryItems.package.dataset.price = prices.package[selectedPackage];
 
-    if (accounting.checked === false) {
-        accountingSummary.style.display = "none";
-       accountingPriceValue = 0;
-    }
-    showTotal();
+    updateTotal();
+  }
 });
 
-terminal.addEventListener("change", function (event) {
-
-    if (terminal.checked === true) {
-        terminalSummary.style.display = "flex";
-        terminalPriceValue = 6;
-        terminalPrice.innerText = "$" + terminalPriceValue;
-    }
-
-    if (terminal.checked === false) {
-        terminalSummary.style.display = "none";
-        terminalPriceValue = 0;
-        totalOrderSummary.style.display = "none";
-    }
-    showTotal();
-
+// Event: Checkbox Selection (Accounting & Terminal)
+form.addEventListener('change', (event) => {
+  if (event.target === accounting) {
+    summaryItems.accounting.style.display = accounting.checked
+      ? 'flex'
+      : 'none';
+    summaryItems.accounting.querySelector(
+      '.item__price'
+    ).innerText = `$${prices.accounting}`;
+  }
+  if (event.target === terminal) {
+    summaryItems.terminal.style.display = terminal.checked ? 'flex' : 'none';
+    summaryItems.terminal.querySelector(
+      '.item__price'
+    ).innerText = `$${prices.terminal}`;
+  }
+  updateTotal();
 });
-
