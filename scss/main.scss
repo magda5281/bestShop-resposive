@@ -1,17 +1,17 @@
-@import "generics/reset";
+@use 'generics/reset';
 
-@import "settings/colors";
-@import "settings/fonts";
-@import "settings/mixins";
-@import "settings/base";
+@use 'settings/colors' as *;
+@use 'settings/fonts' as *;
+@use 'settings/mixins' as *;
+@use 'settings/base' as *;
 
-@import "components/buttons";
+@use 'components/buttons';
 
-@import "sections/header";
-@import "sections/opening";
-@import "sections/statistics";
-@import "sections/benefits";
-@import "sections/pricing";
-@import "sections/contact";
-@import "sections/calculator";
-@import "sections/footer";
+@use 'sections/header';
+@use 'sections/opening';
+@use 'sections/statistics';
+@use 'sections/benefits';
+@use 'sections/pricing';
+@use 'sections/contact';
+@use 'sections/calculator';
+@use 'sections/footer';

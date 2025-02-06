@@ -1,14 +1,17 @@
+@use 'settings/colors' as *;
+@use 'settings/mixins' as *;
+@use 'settings/fonts' as *;
 .contact {
   background-color: $color-background-primary;
   margin: 0 auto;
   font-family: $font-family-primary;
 
-  &__wrapper{
+  &__wrapper {
     max-width: 900px;
     margin: 53px auto 44px;
-    padding:0 30px;
+    padding: 0 30px;
 
-    @include tablet{
+    @include tablet {
       padding: 0 70px;
     }
     @include desktop {
@@ -20,13 +23,12 @@
   }
 
   &__info {
-    @include desktop{
+    @include desktop {
       width: 50%;
     }
-
   }
 
-  &--heading{
+  &--heading {
     width: 100%;
     font-size: 4rem;
     line-height: 4.7rem;
@@ -38,71 +40,62 @@
       line-height: 5.7rem;
     }
   }
-  &__prompt{
+  &__prompt {
     font-size: 1.6rem;
     font-family: $font-family-primary;
     text-align: left;
     padding-bottom: 30px;
     @include desktop {
       padding-bottom: 42px;
-
     }
-
   }
   &__details {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
 
-    @include desktop{
+    @include desktop {
       flex-direction: row;
-
     }
 
     a {
       @include desktop {
-      margin-right: 20px;
+        margin-right: 20px;
       }
     }
-
 
     img {
       height: 27px;
       width: 27px;
       margin-right: 5px;
     }
-
   }
 
-  &__link{
+  &__link {
     font-size: 1rem;
     color: $color-fonts-light;
     font-weight: 600;
     margin-bottom: 15px;
 
-    @include desktop{
+    @include desktop {
       font-size: 1.6rem;
     }
   }
 
-  &__form{
+  &__form {
     @include desktop {
       width: 50%;
       padding-left: 30px;
-
     }
   }
 
   .form {
-
-  &__field {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 42px;
-
-
-  }
-    &__label{
+    &__field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 42px;
+    }
+    &__label {
       text-transform: uppercase;
       color: $color-accent-blue;
       justify-items: center;
@@ -111,10 +104,9 @@
       @include desktop {
         align-self: flex-start;
       }
-
     }
 
-    &__input{
+    &__input {
       border-collapse: collapse;
       border-top: none;
       border-left: none;
@@ -123,63 +115,55 @@
       line-height: 3;
     }
 
-    &__consent{
+    &__consent {
       margin-bottom: 20px;
-
     }
 
-    &__checkbox{
+    &__checkbox {
       display: flex;
       flex-direction: row;
       position: relative;
       margin-bottom: 10px;
 
-    input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
 
-      &:checked + .checkbox{
-        background-image: url("../assets/Checkmark.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-
+        &:checked + .checkbox {
+          background-image: url('../assets/Checkmark.svg');
+          background-position: center;
+          background-repeat: no-repeat;
         }
-    }
+      }
 
-      .checkbox{
+      .checkbox {
         position: absolute;
         top: 0;
         left: 0;
-        border:  1px solid rgba(149, 152, 154, 1);
+        border: 1px solid rgba(149, 152, 154, 1);
         border-radius: 4px;
         background-color: $color-white;
         height: 24px;
         width: 24px;
         cursor: pointer;
       }
-
     }
     &__button {
       display: flex;
       align-items: flex-end;
-      justify-content: end;
+      justify-content: flex-end;
     }
-
   }
 
-  .consent__text{
+  .consent__text {
     margin-left: 29px;
     font-size: 1.2rem;
     color: $color-fonts-dark;
     @include desktop {
       text-align: left;
     }
-
   }
-
-
-
 }

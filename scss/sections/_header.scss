@@ -1,4 +1,6 @@
-
+@use 'settings/colors' as *;
+@use 'settings/mixins' as *;
+@use 'settings/fonts' as *;
 .header {
   background-color: $color-background-primary;
   height: 70px;
@@ -14,16 +16,13 @@
     @include iPad {
       padding: 0 30px;
     }
-   @include desktop {
-     padding: 0 100px;
-   }
-
+    @include desktop {
+      padding: 0 100px;
+    }
   }
-
 
   &__nav {
     display: flex;
-
 
     .nav {
       &__checkbox {
@@ -36,7 +35,6 @@
           display: none;
           top: -9999px;
           left: -9999px;
-
         }
       }
 
@@ -57,14 +55,11 @@
         }
       }
 
-
       &__menu {
         font-size: 2.6rem;
         position: relative;
         padding: 15px;
         background-color: white;
-
-
 
         .burger {
           position: absolute;
@@ -90,7 +85,6 @@
             display: none;
             top: -9999px;
             left: -9999px;
-
           }
         }
       }
@@ -107,7 +101,6 @@
         overflow: hidden;
         transition: all 0.3s ease-in-out;
 
-
         @include tablet {
           max-height: unset;
           position: static;
@@ -120,11 +113,10 @@
       }
 
       &__element {
-
         padding: 14px 26px 0;
 
         &:first-child {
-          padding-top:35px;
+          padding-top: 35px;
         }
 
         &:last-child {
@@ -132,9 +124,8 @@
         }
 
         @include tablet {
-
           &:first-child {
-            padding-top:14px;
+            padding-top: 14px;
           }
 
           &:last-child {
@@ -161,14 +152,11 @@
           cursor: pointer;
 
           @include tablet {
-
             border-bottom: 4px solid $color-accent-blue;
             padding: 25px 0;
-
           }
         }
       }
     }
   }
 }
-

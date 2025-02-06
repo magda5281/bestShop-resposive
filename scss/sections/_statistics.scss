@@ -1,8 +1,11 @@
+@use 'settings/colors' as *;
+@use 'settings/mixins' as *;
+@use 'settings/fonts' as *;
 .statistics {
   background-color: $color-background-primary;
 
   .heading--secondary {
-    margin-top:13px;
+    margin-top: 13px;
     padding: 11px 20px;
     @include tablet {
       font-size: 3.6rem;
@@ -14,7 +17,7 @@
     margin: 25px auto 0;
 
     @include tablet {
-      width:800px;
+      width: 800px;
       display: flex;
       justify-content: space-around;
       margin-top: 100px;
@@ -49,20 +52,20 @@
     align-items: center;
   }
 
-    img {
-      position: absolute;
+  img {
+    position: absolute;
 
-  &.person {
-    left: 30px;
-  }
+    &.person {
+      left: 30px;
+    }
 
-  &.eye {
-    left: 20px;
-  }
+    &.eye {
+      left: 20px;
+    }
 
-      &.catalog {
-        left: 30px;
-      }
+    &.catalog {
+      left: 30px;
+    }
   }
 
   .circle--blue {
@@ -72,7 +75,7 @@
     background-color: $color-accent-green;
   }
 
-  &__numbers{
+  &__numbers {
     margin-bottom: 19px;
     font-family: $font-family-secondary;
     font-size: 20px;
@@ -88,6 +91,5 @@
     color: $color-fonts-light;
     font-weight: 400;
     text-align: center;
-
   }
 }

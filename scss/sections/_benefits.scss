@@ -1,9 +1,11 @@
+@use 'settings/colors' as *;
+@use 'settings/mixins' as *;
+@use 'settings/fonts' as *;
 .benefits {
   background-color: $color-background-secondary;
   padding: 42px 30px;
 
   &__wrapper {
-
     margin: 0 auto;
     @include tablet {
       max-width: 1124px;
@@ -32,7 +34,6 @@
     }
 
     @include desktop {
-
       &:first-child {
         padding: 0 70px 30px 35px;
       }
@@ -45,7 +46,7 @@
     @include tablet {
       background-color: $color-background-secondary;
       border: none;
-      padding:0;
+      padding: 0;
     }
   }
 
@@ -60,7 +61,7 @@
     @include tablet {
       width: 50%;
       height: 230px;
-      margin:50px 0 0 50px;
+      margin: 50px 0 0 50px;
     }
   }
 
@@ -71,20 +72,19 @@
   }
 
   &__artBox--solid {
-      background-color: $color-accent-green;
-      border-radius: 5px;
-      width: 100%;
-      height: 195px;
-      justify-content: flex-start;
+    background-color: $color-accent-green;
+    border-radius: 5px;
+    width: 100%;
+    height: 195px;
+    justify-content: flex-start;
 
     @include iPad {
-        justify-content: center;
+      justify-content: center;
     }
 
     @include tablet {
       height: 340px;
-      margin:0;
-
+      margin: 0;
     }
   }
 
@@ -97,7 +97,7 @@
     z-index: 1;
 
     @include tablet {
-      max-width:300px;
+      max-width: 300px;
       height: 170px;
       left: 30px;
     }
@@ -132,7 +132,6 @@
   }
 
   &__trumpet {
-
     height: 195px;
     position: absolute;
     bottom: -40px;
@@ -141,7 +140,6 @@
       max-width: 295px;
       height: 207px;
       bottom: 45px;
-
     }
   }
 
@@ -184,11 +182,11 @@
       height: 200px;
     }
 
-    @include  desktop {
+    @include desktop {
       width: 320px;
       height: 320px;
       top: -37px;
-      left:43px;
+      left: 43px;
     }
   }
 
@@ -200,13 +198,12 @@
       margin: 50px 0;
 
       &::after {
-        content: "";
+        content: '';
         height: 4px;
         background-color: $color-accent-red;
         display: block;
         width: 330px;
         margin-top: 50px;
-
       }
     }
 
@@ -216,9 +213,8 @@
   }
 
   &__text--iPhone {
-
     &::after {
-      content: "";
+      content: '';
       background-color: $color-accent-blue;
     }
 
@@ -228,7 +224,7 @@
   }
 
   &__text--separate {
-    padding:0 21px 25px 21px;
+    padding: 0 21px 25px 21px;
     margin-top: 0;
 
     @include tablet {
@@ -257,7 +253,7 @@
     margin-bottom: 18px;
   }
 
-  &__paragraph{
+  &__paragraph {
     font-family: $font-family-primary;
     color: $color-fonts-primary;
     font-size: 1.4rem;
@@ -270,6 +266,3 @@
     }
   }
 }
-
-
-

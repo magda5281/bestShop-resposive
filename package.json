@@ -61,7 +61,6 @@
     "camelcase": "^3.0.0",
     "caniuse-lite": "^1.0.30001258",
     "chalk": "^4.1.2",
-    "chokidar": "^3.5.2",
     "class-utils": "^0.3.6",
     "cliui": "^3.2.0",
     "clone": "^2.1.2",
@@ -165,7 +164,6 @@
     "graceful-fs": "^4.2.8",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-cli": "^2.3.0",
-    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulplog": "^1.0.0",
     "has": "^1.0.3",
@@ -330,7 +328,6 @@
     "safe-buffer": "^5.1.2",
     "safe-regex": "^1.1.0",
     "safer-buffer": "^2.1.2",
-    "sass": "^1.41.1",
     "semver": "^5.7.1",
     "semver-greatest-satisfied-range": "^1.1.0",
     "send": "^0.16.2",
@@ -420,7 +417,10 @@
     "yeast": "^0.1.2"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "chokidar": "^4.0.3",
+    "gulp": "^5.0.0",
+    "gulp-dart-sass": "^1.1.0",
+    "sass": "^1.84.0"
   },
   "scripts": {
     "start": "gulp",

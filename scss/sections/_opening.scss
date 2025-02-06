@@ -1,53 +1,51 @@
+@use 'settings/colors' as *;
+@use 'settings/mixins' as *;
+@use 'settings/fonts' as *;
 .opening {
-    background-color: $color-background-primary;
+  background-color: $color-background-primary;
 
-    &__wrapper {
-        margin: 0 auto;
-        text-align: center;
-        height: 100%;
+  &__wrapper {
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+  }
+  &__heading {
+    margin-top: 100px;
 
+    @include tablet {
+      margin-top: 130px;
     }
-    &__heading {
-        margin-top: 100px;
-
-        @include tablet {
-            margin-top: 130px;
-        }
-        @include desktop {
-            font-size: 4.9rem;
-        }
+    @include desktop {
+      font-size: 4.9rem;
     }
-    &__paragraph {
-        margin: 20px 0 28px 0;
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 1.6rem;
-        font-family: $font-family-primary;
-        font-weight: 400;
-        justify-content: center;
+  }
+  &__paragraph {
+    margin: 20px 0 28px 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.6rem;
+    font-family: $font-family-primary;
+    font-weight: 400;
+    justify-content: center;
+  }
+
+  &__image {
+    margin: 60px 0;
+  }
+
+  img {
+    width: 100vw;
+    height: auto;
+
+    @include desktop {
+      width: 100%;
     }
+  }
 
-    &__image{
-
-        margin: 60px 0;
+  .btn--large {
+    @include tablet {
+      padding-right: 157px;
+      padding-left: 157px;
     }
-
-    img {
-
-        width: 100vw;
-        height: auto;
-
-        @include desktop {
-            width: 100%;
-        }
-
-
-    }
-
-    .btn--large {
-        @include tablet {
-            padding-right: 157px;
-            padding-left: 157px;
-        }
-    }
+  }
 }
