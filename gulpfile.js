@@ -1,4 +1,4 @@
-const entryPath = '.';
+const entryPath = 'public'; // Updated to reflect new folder structure
 
 const gulp = require('gulp');
 const sass = require('gulp-dart-sass');
@@ -8,25 +8,24 @@ const browserSync = require('browser-sync').create();
 
 function compileSass(done) {
   gulp
-    .src(entryPath + '/scss/main.scss')
+    .src('scss/main.scss') // Updated: source SCSS from root scss folder
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(entryPath + '/css'));
-  // .pipe(browserSync.stream());
+    .pipe(gulp.dest(entryPath + '/css')); // Output compiled CSS to public/css
 
   done();
 }
 
 function watcher(done) {
   browserSync.init({
-    server: entryPath + '/',
+    server: entryPath + '/', // Serve from public directory
   });
 
-  gulp.watch(entryPath + '/scss/**/*.scss', gulp.series(compileSass, reload));
-  gulp.watch(entryPath + '/*.html', gulp.series(reload));
-  gulp.watch(entryPath + '/js/*.js', gulp.series(reload));
+  gulp.watch('scss/**/*.scss', gulp.series(compileSass, reload)); // Watch SCSS changes
+  gulp.watch(entryPath + '/*.html', gulp.series(reload)); // Watch HTML changes
+  gulp.watch(entryPath + '/js/*.js', gulp.series(reload)); // Watch JS changes
 
   done();
 }
