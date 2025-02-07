@@ -60,6 +60,8 @@ Watch for changes and live-reload
 - npm run build
   (This command may vary based on your Gulp setup.)
 
+---
+
 ## 🚀 Deployment to Vercel
 
 ### 1️⃣ Install Vercel CLI (if not installed)
@@ -78,11 +80,15 @@ Watch for changes and live-reload
 ✅ Gulp.js: Task automation (SCSS compilation, live-reloading).
 ✅ Vercel: Hosting and deployment.
 
+---
+
 ## 📌 To-Do / Future Improvements
 
 ⏳ Add Dark Mode Support 🌙: Enhance user experience with a dark mode option.
 ⏳ Improve Animations ✨: Enhance UI interactions and transitions.
 ⏳ Optimize Images 📷: Ensure faster loading times with compressed images.
+
+---
 
 ## 📝 License
 
