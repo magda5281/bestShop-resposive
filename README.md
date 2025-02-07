@@ -3,7 +3,7 @@
 **BestShop Responsive** is a modern, fully responsive website built using **HTML, SCSS, JavaScript, and Gulp**. It features a clean and professional design optimized for all devices.
 
 This project is deployed on **Vercel**:  
-🔗 **[Live Demo](https://best-shop-resposive.vercel.app)**
+🔗 **(<a href="(https://best-shop-resposive.vercel.app)" target=_blank>Live Demo</a>)**
 
 ---
 
@@ -38,7 +38,7 @@ bestShop-responsive/
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/yourusername/bestshop-responsive.git
+git clone https://github.com/magda5281/bestshop-responsive.git
 cd bestshop-responsive
 
 ### 2️⃣ Install Dependencies\*\*
