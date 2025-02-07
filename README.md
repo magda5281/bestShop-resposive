@@ -41,11 +41,11 @@ bestShop-responsive/
 git clone https://github.com/yourusername/bestshop-responsive.git
 cd bestshop-responsive
 
-## 2️⃣ Install Dependencies\*\*
+### 2️⃣ Install Dependencies\*\*
 
 - npm install
 
-## 3️⃣ Run Development Server
+### 3️⃣ Run Development Server
 
 - npx gulp
 
@@ -55,22 +55,22 @@ Compile SCSS → CSS
 Start a local server at http://localhost:3000/
 Watch for changes and live-reload
 
-## 4️⃣ Build for Production
+### 4️⃣ Build for Production
 
 - npm run build
   (This command may vary based on your Gulp setup.)
 
-# 🚀 Deployment to Vercel
+## 🚀 Deployment to Vercel
 
-## 1️⃣ Install Vercel CLI (if not installed)
+### 1️⃣ Install Vercel CLI (if not installed)
 
 - npm install -g vercel
 
-## 3️⃣ Deploy the Project
+### 3️⃣ Deploy the Project
 
 - vercel --prod
 
-# 🎨 Technologies Used
+## 🎨 Technologies Used
 
 ✅ HTML5: Structured content.
 ✅ SCSS (SASS): Preprocessor for CSS.
@@ -78,12 +78,12 @@ Watch for changes and live-reload
 ✅ Gulp.js: Task automation (SCSS compilation, live-reloading).
 ✅ Vercel: Hosting and deployment.
 
-# 📌 To-Do / Future Improvements
+## 📌 To-Do / Future Improvements
 
 ⏳ Add Dark Mode Support 🌙: Enhance user experience with a dark mode option.
 ⏳ Improve Animations ✨: Enhance UI interactions and transitions.
 ⏳ Optimize Images 📷: Ensure faster loading times with compressed images.
 
-# 📝 License
+## 📝 License
 
 This project is open-source and available under the MIT License.
