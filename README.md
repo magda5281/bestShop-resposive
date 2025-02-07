@@ -38,23 +38,14 @@ bestShop-responsive/
 
 ### 1️⃣ Clone the Repository
 
-```sh
 git clone https://github.com/yourusername/bestshop-responsive.git
 cd bestshop-responsive
-```
 
 ## 2️⃣ Install Dependencies\*\*
 
-```sh
-command:
-
 - npm install
-```
 
 ## 3️⃣ Run Development Server
-
-```sh
-commands:
 
 - npx gulp
 
@@ -63,32 +54,21 @@ This will:
 Compile SCSS → CSS
 Start a local server at http://localhost:3000/
 Watch for changes and live-reload
-```
 
 ## 4️⃣ Build for Production
 
-```sh
-commands:
-
 - npm run build
   (This command may vary based on your Gulp setup.)
-```
 
 # 🚀 Deployment to Vercel
 
 ## 1️⃣ Install Vercel CLI (if not installed)
 
-commands:
-
 - npm install -g vercel
 
 ## 3️⃣ Deploy the Project
 
-```sh
-commands:
-
 - vercel --prod
-```
 
 # 🎨 Technologies Used
 
